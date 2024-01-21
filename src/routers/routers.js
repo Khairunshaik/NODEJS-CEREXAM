@@ -24,14 +24,14 @@ var corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/game-rental", {
+mongoose.connect("mongodb+srv://shaikkhairunnisa900:GzhtfHFjIEIpuRvh@cluster0.qbrhq3x.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
 db.once("open", (_) => {
-    console.log("Database connected:", "mongodb://localhost:27017/game-rental");
+    console.log("Database connected:", "mongodb+srv://shaikkhairunnisa900:GzhtfHFjIEIpuRvh@cluster0.qbrhq3x.mongodb.net/");
 });
 db.on("error", (err) => {
     console.error("connection error:", err);

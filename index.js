@@ -1,6 +1,6 @@
 const bodyParser = require("body-parser");
 const { app } = require("./src/routers/routers");
-const dbConnection = require("./src/config/db.config");
+const { dbConnection } = require("./config/db.config");
 app.use(bodyParser.json());
 
 app.listen(3000,async () => {
